@@ -2,22 +2,26 @@ package by.example.simulationoop.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Карта, содержит в себе коллекцию для хранения существ и их расположения.
- *
- * Этот класс представляет собой карту, на которой будут располагаться существа и объекты.
- * Мы используем список для хранения сущностей, а также сохраняем размеры карты.
+ * <p>
+ * Этот класс представляет собой карту, на которой будут располагаться существа и объекты. Мы
+ * используем список для хранения сущностей, а также сохраняем размеры карты.
  */
 public class MapSimulation {
+
   private List<EntitySimulation> entities;
   private int width;
   private int height;
+  private Random random;
 
   public MapSimulation(int width, int height) {
     this.width = width;
     this.height = height;
     this.entities = new ArrayList<>();
+    this.random = new Random();
   }
 
   public void addEntity(EntitySimulation entity) {
@@ -34,5 +38,23 @@ public class MapSimulation {
 
   public int getHeight() {
     return height;
+  }
+
+  public void addRandomEntity() {
+    int x = random.nextInt(width);
+    int y = random.nextInt(height);
+    Creature creature = new Herbivore(1, 10); // создаем новый экземпляр Herbivore
+    creature.setX(x);
+    creature.setY(y);
+    entities.add(creature);
+  }
+
+  public void addRandomGrass() {
+    int x = random.nextInt(width);
+    int y = random.nextInt(height);
+    Grass grass = new Grass();
+    grass.setX(x);
+    grass.setY(y);
+    entities.add(grass);
   }
 }
