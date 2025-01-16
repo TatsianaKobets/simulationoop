@@ -1,9 +1,9 @@
-package java.by.example.simulationoop.entity;
+package by.example.simulationoop.entity;
 /**
  * Абстрактный класс, наследуется от Entity.
  * Существо, имеет скорость (сколько клеток может пройти за 1 ход), количество HP.
  */
-public abstract class Creature extends EntitySimulation {
+public abstract class Creature extends EntitySimulation { //живое существо
   private int speed;
   private int hp;
 

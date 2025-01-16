@@ -1,4 +1,4 @@
-package java.by.example.simulationoop.entity;
+package by.example.simulationoop.entity;
 /**
  * Rock - статичный объект.
  */

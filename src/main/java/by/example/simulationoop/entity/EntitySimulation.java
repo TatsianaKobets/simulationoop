@@ -1,4 +1,4 @@
-package java.by.example.simulationoop.entity;
+package by.example.simulationoop.entity;
 /**
  * Корневой абстрактный класс для всех существ и объектов существующих в симуляции.
  */

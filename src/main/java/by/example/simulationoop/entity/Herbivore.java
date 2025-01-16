@@ -1,4 +1,4 @@
-package java.by.example.simulationoop.entity;
+package by.example.simulationoop.entity;
 
 /**
  * Травоядное, наследуется от Creature. Стремятся найти ресурс (траву), может потратить свой ход на
