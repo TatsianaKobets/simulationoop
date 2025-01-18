@@ -5,6 +5,8 @@ import by.example.simulationoop.entity.EntitySimulation;
 import by.example.simulationoop.entity.Grass;
 import by.example.simulationoop.entity.Herbivore;
 import by.example.simulationoop.entity.Predator;
+import by.example.simulationoop.entity.Rock;
+import by.example.simulationoop.entity.Tree;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -69,5 +71,22 @@ public class MapSimulation {
     grass.setX(x);
     grass.setY(y);
     entities.add(grass);
+  }
+  public void addRandomTree() {
+    int x = random.nextInt(width);
+    int y = random.nextInt(height);
+    Tree tree = new Tree();
+    tree.setX(x);
+    tree.setY(y);
+    entities.add(tree);
+  }
+
+  public void addRandomRock() {
+    int x = random.nextInt(width);
+    int y = random.nextInt(height);
+    Rock rock = new Rock();
+    rock.setX(x);
+    rock.setY(y);
+    entities.add(rock);
   }
 }
