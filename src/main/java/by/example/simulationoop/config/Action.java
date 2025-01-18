@@ -1,6 +1,6 @@
 package by.example.simulationoop.config;
 
-import by.example.simulationoop.entity.MapSimulation;
+import by.example.simulationoop.simulation.MapSimulation;
 
 /**
  * Действие, совершаемое над миром.

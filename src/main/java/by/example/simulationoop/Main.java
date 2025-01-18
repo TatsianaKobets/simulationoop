@@ -1,7 +1,8 @@
 package by.example.simulationoop;
 
 import by.example.simulationoop.config.Renderer;
-import by.example.simulationoop.entity.MapSimulation;
+import by.example.simulationoop.simulation.MapSimulation;
+import by.example.simulationoop.simulation.Simulation;
 import java.io.IOException;
 
 public class Main {

@@ -1,5 +1,9 @@
-package by.example.simulationoop.entity;
+package by.example.simulationoop.simulation;
 
+import by.example.simulationoop.entity.Creature;
+import by.example.simulationoop.entity.EntitySimulation;
+import by.example.simulationoop.entity.Grass;
+import by.example.simulationoop.entity.Herbivore;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
