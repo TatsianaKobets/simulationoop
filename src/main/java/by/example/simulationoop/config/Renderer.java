@@ -5,6 +5,8 @@ import by.example.simulationoop.entity.EntitySimulation;
 import by.example.simulationoop.entity.Grass;
 import by.example.simulationoop.entity.Herbivore;
 import by.example.simulationoop.entity.Predator;
+import by.example.simulationoop.entity.Rock;
+import by.example.simulationoop.entity.Tree;
 import by.example.simulationoop.simulation.MapSimulation;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
@@ -44,7 +46,12 @@ public class Renderer {
                 } else if (entity instanceof Predator) {
                   graphics.putString(j, i, "P"); // выводим хищника
                 }
+              } else if (entity instanceof Tree) {
+                graphics.putString(j, i, "T"); // выводим дерево
+              } else if (entity instanceof Rock) {
+                graphics.putString(j, i, "R"); // выводим камень
               }
+
               entityFound = true;
               break;
             }
