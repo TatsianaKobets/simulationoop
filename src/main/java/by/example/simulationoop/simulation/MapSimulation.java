@@ -4,6 +4,7 @@ import by.example.simulationoop.entity.Creature;
 import by.example.simulationoop.entity.EntitySimulation;
 import by.example.simulationoop.entity.Grass;
 import by.example.simulationoop.entity.Herbivore;
+import by.example.simulationoop.entity.Predator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,10 +45,18 @@ public class MapSimulation {
     return height;
   }
 
-  public void addRandomEntity() {
+  public void addRandomHerbivore() {
     int x = random.nextInt(width);
     int y = random.nextInt(height);
     Creature creature = new Herbivore(1, 10); // создаем новый экземпляр Herbivore
+    creature.setX(x);
+    creature.setY(y);
+    entities.add(creature);
+  }
+  public void addRandomPredator() {
+    int x = random.nextInt(width);
+    int y = random.nextInt(height);
+    Creature creature = new Predator(1, 10, 10); // создаем новый экземпляр Herbivore
     creature.setX(x);
     creature.setY(y);
     entities.add(creature);

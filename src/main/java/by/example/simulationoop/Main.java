@@ -9,7 +9,8 @@ public class Main {
   public static void main(String[] args) throws IOException {
     MapSimulation map = new MapSimulation(20, 20);
     for (int i = 0; i < 10; i++) {
-      map.addRandomEntity();
+      map.addRandomHerbivore();
+      map.addRandomPredator();
       map.addRandomGrass();
     }
 

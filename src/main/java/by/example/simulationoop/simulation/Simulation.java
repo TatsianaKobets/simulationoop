@@ -1,6 +1,8 @@
 package by.example.simulationoop.simulation;
 
 import by.example.simulationoop.config.Renderer;
+import by.example.simulationoop.entity.Creature;
+import by.example.simulationoop.entity.EntitySimulation;
 import java.io.IOException;
 
 /**
@@ -23,9 +25,16 @@ public class Simulation {
 
   public void startSimulation() throws IOException {
     while (true) {
+      // Обновляем позиции существ
+      for (EntitySimulation entity : map.getEntities()) {
+        if (entity instanceof Creature) {
+          ((Creature) entity).makeMove(map);
+        }
+      }
+
       renderer.render(map);
       try {
-        Thread.sleep(1000); // пауза между кадрами
+        Thread.sleep(1000); // Пауза между кадрами
       } catch (InterruptedException e) {
         System.out.println("Ошибка паузы");
       }
