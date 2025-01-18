@@ -89,4 +89,8 @@ public class MapSimulation {
     rock.setY(y);
     entities.add(rock);
   }
+
+  public void removeEntity(EntitySimulation entity) {
+    entities.remove(entity);
+  }
 }
